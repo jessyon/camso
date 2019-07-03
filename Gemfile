@@ -47,6 +47,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'sqlite3', '~> 1.3.13'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -56,9 +58,6 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise', '~> 4.2.0'
 gem 'toastr-rails', '~> 1.0'
 
-group :development do
-gem 'sqlite3', '~> 1.3.13'
-end
 
 group :production do
   gem 'pg'
