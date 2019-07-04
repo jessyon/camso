@@ -54,23 +54,16 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Mailgun smtp setting
   config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings ={
-  #   address: 'smtp.sendgrid.net',
-  #   port: 587,
-  #   domain:' smtp.sendgrid.com',
-  #   login:'plain',
-  #   user_name:'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',
-  #   password: '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'
-  # }
-  ActionMailer::Base.smtp_settings = {
-  :user_name => 'kateyon',
-  :password => 'Iloveme81!',
-  :domain => 'rentfriends.co',
-  :address => 'smtp.sendgrid.net',
-  :port => 587,
-  :authentication => :plain,
-  :enable_starttls_auto => true
-}
+
+  config.action_mailer.smtp_settings ={
+  address: 'smtp.mailgun.org',
+  port: 587,
+  domain: 'sandbox8c702b0980c2423aabe057f06bc7db3b.mailgun.org',
+  authentication: 'plain',
+  username: 'postmaster@sandbox8c702b0980c2423aabe057f06bc7db3b.mailgun.org',
+  password: 'aee134bf23f346a6eb8e75b0b26c7428-2b0eef4c-2d29c454'
+  }
+
 
   # Gmail smtp setting
   # config.action_mailer.smtp_settings ={
@@ -78,7 +71,7 @@ Rails.application.configure do
   #   port: 587,
   #   enable_starttls_auto: true,
   #   login:'plain',
-  #   user_name:'kateyon@gmail.com',
-  #   password: 'ilovemeall'
+  #   user_name:'',
+  #   password: ''
   # }
 end
